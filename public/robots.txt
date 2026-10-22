@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://smyler7.github.io/sixfolds-lab/sitemap.xml
