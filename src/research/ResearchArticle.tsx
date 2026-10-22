@@ -70,12 +70,12 @@ function TechnicalFigure({ slug, diagram, caption }: { slug: string; diagram: 'o
 
 export default function ResearchArticle({ slug }: { slug: string }) {
   const exploration = getExploration(slug);
-  if (!exploration) return <section className="research-article-missing container"><h1>Exploration not found.</h1><Link to="/research" className="research-action"><ArrowLeft size={15} /> Back to Research</Link></section>;
+  if (!exploration) return <section className="research-article-missing container"><h1>Exploration not found.</h1><Link to="/research/" className="research-action"><ArrowLeft size={15} /> Back to Research</Link></section>;
 
   const related = explorations.filter((item) => item.slug !== exploration.slug);
 
   return <article className="research-article-page container">
-    <Link to="/research" className="research-back-link"><ArrowLeft size={15} /> Research & Engineering</Link>
+    <Link to="/research/" className="research-back-link"><ArrowLeft size={15} /> Research & Engineering</Link>
     <header className="research-article-header">
       <div className="research-article-meta"><span>{exploration.category}</span><i /><span>TECHNICAL EXPLORATION</span><span className="research-meta-separator">/</span><span>No publication date</span></div>
       <h1>{exploration.title}</h1>
@@ -88,7 +88,7 @@ export default function ResearchArticle({ slug }: { slug: string }) {
       <nav className="research-toc" aria-labelledby="research-toc-heading">
         <h2 id="research-toc-heading">IN THIS EXPLORATION</h2>
         <ol>{exploration.sections.map((section, index) => <li key={section.id}><a href={`#${section.id}`}><span>{String(index + 1).padStart(2, '0')}</span>{section.title}</a></li>)}<li><a href="#references"><span>↗</span>Selected references</a></li></ol>
-        <Link to="/research" className="research-toc-all">All explorations <ArrowRight size={13} /></Link>
+        <Link to="/research/" className="research-toc-all">All explorations <ArrowRight size={13} /></Link>
       </nav>
 
       <div className="research-article-content">
@@ -109,8 +109,8 @@ export default function ResearchArticle({ slug }: { slug: string }) {
         </section>
 
         <section className="related-explorations" aria-labelledby="related-heading">
-          <div className="related-explorations-heading"><div><span className="research-section-index">CONTINUE EXPLORING</span><h2 id="related-heading">Related questions</h2></div><Link to="/research">View all <ArrowRight size={14} /></Link></div>
-          <div className="related-explorations-grid">{related.map((item, index) => <Link to={`/research/${item.slug}`} className="related-exploration-card" key={item.slug}>
+          <div className="related-explorations-heading"><div><span className="research-section-index">CONTINUE EXPLORING</span><h2 id="related-heading">Related questions</h2></div><Link to="/research/">View all <ArrowRight size={14} /></Link></div>
+          <div className="related-explorations-grid">{related.map((item, index) => <Link to={`/research/${item.slug}/`} className="related-exploration-card" key={item.slug}>
             <span className="research-card-meta">0{index + 1} <i /> {item.category}</span>
             <h3>{item.title}</h3><p>{item.summary}</p><span className="related-link">Read exploration <ArrowUpRight size={14} /></span>
           </Link>)}</div>

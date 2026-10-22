@@ -8,8 +8,8 @@ if (!origin || !/^https:\/\//i.test(origin)) {
 const paths = [
   '/', '/products', '/products/agentforge', '/products/zimbiz-os', '/products/gpa-plus',
   '/products/cybersentinel', '/products/devpilot-africa', '/solutions', '/solutions/businesses',
-  '/solutions/education', '/solutions/developers', '/research', '/research/building-with-human-oversight',
-  '/research/useful-ai-by-design', '/research/software-that-explains-itself', '/company', '/careers',
+  '/solutions/education', '/solutions/developers', '/research/', '/research/building-with-human-oversight/',
+  '/research/useful-ai-by-design/', '/research/software-that-explains-itself/', '/company', '/careers',
   '/contact', '/blog', '/privacy', '/terms', '/security'
 ];
 const urls = paths.map(path => `  <url><loc>${origin}${path}</loc></url>`).join('\n');

@@ -1,3 +1,4 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-export default defineConfig({ base: '/sixfolds-lab/', plugins: [react()] });
+import { siteBase } from './src/site-config.js';
+export default defineConfig({ base: siteBase, plugins: [react()] });

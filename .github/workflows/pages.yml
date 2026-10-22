@@ -35,6 +35,8 @@ jobs:
           SITE_URL: https://smyler7.github.io/sixfolds-lab
       - name: Build site
         run: npm run build
+        env:
+          SITE_URL: https://smyler7.github.io/sixfolds-lab
       - name: Add SPA fallback for GitHub Pages
         run: cp dist/index.html dist/404.html
       - name: Upload site artifact

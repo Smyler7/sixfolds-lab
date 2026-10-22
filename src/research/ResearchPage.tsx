@@ -29,7 +29,7 @@ export default function ResearchPage() {
           <div className="research-feature-topics" aria-label="Topics">
             {featured.topics.map((topic) => <span key={topic}>{topic}</span>)}
           </div>
-          <Link className="research-action" to={`/research/${featured.slug}`}>Explore the question <ArrowRight size={15} /></Link>
+          <Link className="research-action" to={`/research/${featured.slug}/`}>Explore the question <ArrowRight size={15} /></Link>
         </div>
         <div className="research-feature-art" aria-hidden="true">
           <div className="feature-grid-lines" />
@@ -89,7 +89,7 @@ export default function ResearchPage() {
         </p>
 
         {filteredExplorations.length > 0 ? <div className="research-list">
-          {filteredExplorations.map((exploration, index) => <Link className="research-card" to={`/research/${exploration.slug}`} key={exploration.slug}>
+          {filteredExplorations.map((exploration, index) => <Link className="research-card" to={`/research/${exploration.slug}/`} key={exploration.slug}>
             <span className="research-card-index">{String(index + 1).padStart(2, '0')}</span>
             <div className="research-card-body">
               <div className="research-card-meta"><span>{exploration.category}</span><i /><span>TECHNICAL EXPLORATION</span></div>

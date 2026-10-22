@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": { "dev": "vite", "build": "tsc -b && vite build", "preview": "vite preview", "sitemap": "node scripts/generate-sitemap.mjs" },
+  "scripts": { "dev": "vite", "build": "tsc -b && vite build && npm run prerender:research", "preview": "vite preview", "sitemap": "node scripts/generate-sitemap.mjs", "prerender:research": "node scripts/prerender-research.mjs" },
   "dependencies": { "react": "^19.0.0", "react-dom": "^19.0.0", "react-router-dom": "^7.1.1", "lucide-react": "^0.468.0" },
   "devDependencies": { "@types/react": "^19.0.6", "@types/react-dom": "^19.0.3", "@vitejs/plugin-react": "^4.3.4", "autoprefixer": "^10.4.20", "postcss": "^8.4.49", "tailwindcss": "^3.4.17", "typescript": "~5.7.3", "vite": "^6.1.0" }
 }
