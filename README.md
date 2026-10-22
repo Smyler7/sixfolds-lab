@@ -10,6 +10,10 @@ Responsive corporate website built with React, TypeScript, Vite, React Router, T
 
 Run `npm run build` for the TypeScript check and optimized Vite bundle.
 
+## Live website
+
+The `main` branch deploys to GitHub Pages at `https://smyler7.github.io/sixfolds-lab/`. The workflow builds the site and publishes the `dist` directory. Client-side routes use the `/sixfolds-lab/` base path and an SPA fallback for direct links.
+
 ## Before launch
 
 - Product pages describe concepts in development. Confirm availability and capabilities before changing status copy.
